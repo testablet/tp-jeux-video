@@ -69,7 +69,4 @@ Le joueur incarne un héros dans un monde ouvert rempli de mystères, de dangers
 - Polissage des graphismes, des animations et de l'expérience utilisateur.
 
 ### 5.4. Livraison
-- Version finale du jeu prête à être distribuée aux joueurs.
-
-## 6. Conclusion
-Le jeu d'aventure en open world développé sur Godot vise à offrir aux joueurs une expérience immersive et captivante, avec un monde riche à explorer, des quêtes palpitantes à accomplir et des défis à relever. En respectant le cahier des charges, le jeu devrait offrir une expérience de jeu engageante et divertissante pour les joueurs.
+- Version finale du jeu prête à être distribuée aux joueurs pour le 08/03/2024.
