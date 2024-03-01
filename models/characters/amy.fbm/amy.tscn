@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcwip8bwtms3g"]
+
+[ext_resource type="PackedScene" uid="uid://cxkmd5cyblq56" path="res://models/characters/amy.fbx" id="1_b228i"]
+[ext_resource type="Script" path="res://lib/player.gd" id="1_ji6n7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r56n3"]
+size = Vector3(1.32678, 1.53156, 0.527405)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nk0ui"]
+size = Vector3(1.34332, 1.51086, 0.470703)
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(-1, 3.48787e-16, -8.74228e-08, 3.48787e-16, 1, -3.48787e-16, 8.74228e-08, -3.48787e-16, -1, 0, 0, 0)
+script = ExtResource("1_ji6n7")
+
+[node name="Ami" parent="." instance=ExtResource("1_b228i")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, -4.02214e-24, 0, -4.02214e-24, 1, 0, 0, 0, 1, -0.00457764, 0.736969, 0.0293884)
+shape = SubResource("BoxShape3D_r56n3")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(-1, -4.37114e-08, 7.57103e-08, 3.02058e-16, 0.866025, 0.5, -8.74228e-08, 0.5, -0.866025, 2.08165e-12, 1.5, -1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Ami")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, -4.02214e-24, 0, -4.02214e-24, 1, 0, 0, 0, 1, -0.0104065, 0.728697, 0.224911)
+shape = SubResource("BoxShape3D_nk0ui")
